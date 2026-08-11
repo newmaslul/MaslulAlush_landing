@@ -61,7 +61,19 @@
   nav.links a:hover{ color:var(--teal); }
   .nav-cta{ background:var(--teal); color:#0d1a1a; padding:10px 20px; border-radius:999px; font-weight:700; font-size:14px; white-space:nowrap; transition:transform .2s, background .2s; }
   .nav-cta:hover{ background:var(--green); transform:translateY(-1px); }
-  @media(max-width:860px){ nav.links{ display:none; } }
+  .menu-toggle{ display:none; flex-direction:column; justify-content:center; align-items:flex-end; gap:5px; width:34px; height:34px; background:none; border:none; cursor:pointer; padding:0; flex-shrink:0; }
+  .menu-toggle span{ display:block; width:100%; height:2px; background:#fff; border-radius:2px; transition:transform .2s ease, opacity .2s ease; }
+  .menu-toggle.open span:nth-child(1){ transform:translateY(7px) rotate(45deg); }
+  .menu-toggle.open span:nth-child(2){ opacity:0; }
+  .menu-toggle.open span:nth-child(3){ transform:translateY(-7px) rotate(-45deg); }
+  .mobile-links{ display:none; flex-direction:column; max-width:var(--max); margin:0 auto; padding:0 28px 16px; }
+  .mobile-links a{ color:rgba(247,243,232,0.85); font-weight:600; font-size:15px; padding:13px 0; border-top:1px solid rgba(247,243,232,0.12); }
+  .mobile-links.open{ display:flex; }
+  @media(max-width:860px){
+    nav.links{ display:none; }
+    .menu-toggle{ display:flex; }
+  }
+  @media(min-width:861px){ .mobile-links{ display:none !important; } }
 
   /* ===== HERO ===== */
   .hero{ background:linear-gradient(180deg, var(--navy) 0%, var(--navy-deep) 100%); color:#fff; text-align:center; padding:90px 0 70px; }
@@ -106,6 +118,18 @@
   .overview-table .badge{ display:inline-block; background:var(--teal); color:#fff; font-size:11px; font-weight:700; padding:3px 9px; border-radius:6px; margin-inline-end:8px; }
   .table-scroll{ overflow-x:auto; }
   .table-scroll table{ min-width:560px; }
+  @media(max-width:640px){
+    .table-scroll{ overflow-x:visible; }
+    .table-scroll table{ min-width:0; width:100%; }
+    .overview-table thead{ display:none; }
+    .overview-table, .overview-table tbody, .overview-table tr, .overview-table td{ display:block; width:100%; }
+    .overview-table{ box-shadow:none; }
+    .overview-table tbody tr{ margin-bottom:12px; border-radius:10px; overflow:hidden; box-shadow:0 4px 14px rgba(27,39,51,0.07); }
+    .overview-table tbody tr:last-child{ margin-bottom:0; }
+    .overview-table tbody td{ border-bottom:none; }
+    .overview-table tbody td:last-child{ padding-top:0; color:var(--ink-soft); font-size:13.5px; }
+    .overview-table tbody td:last-child::before{ content:"⏱ משך: "; color:var(--teal-deep); font-weight:700; }
+  }
 
   /* ===== CARDS ===== */
   .card-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
@@ -198,7 +222,16 @@
       <a href="#contact">יצירת קשר</a>
     </nav>
     <a class="nav-cta" href="#contact">בואו נתחיל</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="פתיחת תפריט" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
+  <nav class="mobile-links" id="mobileLinks">
+    <a href="#maslul-chadash">מסלול חדש בטוח</a>
+    <a href="#ratzim-batuach">רצים בטוח</a>
+    <a href="#sadnaot">סדנאות חד־יומיות</a>
+    <a href="#contact">יצירת קשר</a>
+  </nav>
 </header>
 
 <!-- ===== HERO ===== -->
@@ -451,6 +484,23 @@
 </section>
 
 <footer class="site-footer">מסלול חדש — עמותה לחוסן והעצמה ומנהיגות · newmaslul.co.il</footer>
+
+<script>
+  var menuToggle = document.getElementById('menuToggle');
+  var mobileLinks = document.getElementById('mobileLinks');
+  menuToggle.addEventListener('click', function(){
+    var isOpen = mobileLinks.classList.toggle('open');
+    menuToggle.classList.toggle('open', isOpen);
+    menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+  mobileLinks.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      mobileLinks.classList.remove('open');
+      menuToggle.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded','false');
+    });
+  });
+</script>
 
 </body>
 </html>
