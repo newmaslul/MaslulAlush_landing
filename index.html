@@ -95,7 +95,7 @@
     box-shadow:0 2px 20px rgba(0,0,0,0.25);
   }
   .brand{ display:flex; align-items:center; gap:12px; }
-  .brand svg{width:34px; height:34px;}
+  .brand img{height:34px; width:auto; display:block;}
   .brand-text{ color:var(--paper); font-family:'Frank Ruhl Libre',serif; font-size:19px; font-weight:700; line-height:1.1;}
   .brand-text span{display:block; font-family:'Assistant',sans-serif; font-size:10.5px; font-weight:600; letter-spacing:1.5px; color:var(--brass-light); margin-top:2px;}
   .nav-links{ display:flex; gap:34px; }
@@ -414,7 +414,7 @@
   }
   @media(min-width:700px){ footer .wrap{ flex-direction:row; justify-content:space-between; text-align:start; } }
   .foot-brand{ display:flex; align-items:center; gap:10px; }
-  .foot-brand svg{ width:24px; height:24px; }
+  .foot-brand img{ height:24px; width:auto; display:block; }
   .foot-brand-text{ color:var(--paper); font-size:14px; font-weight:700; }
   .foot-brand-text span{ display:block; font-size:11px; font-weight:500; color:rgba(248,243,231,0.5); }
   footer .copy{ font-size:12.5px; color:rgba(248,243,231,0.4); }
@@ -453,10 +453,7 @@
 
 <nav id="nav">
   <div class="brand">
-    <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M4 30C10 30 10 18 16 18C22 18 22 30 28 30C34 30 34 18 40 18" stroke="#5ED1C4" stroke-width="4.5" stroke-linecap="round"/>
-      <path d="M8 36C14 36 14 24 20 24C26 24 26 36 32 36C38 36 38 24 44 24" stroke="#8FDB6E" stroke-width="4.5" stroke-linecap="round"/>
-    </svg>
+    <img src="images/logo-mark.png" alt="מסלול חדש">
     <div class="brand-text">צוות אלוש<span>מסלול חדש · תוכנית שירות משמעותי</span></div>
   </div>
   <div class="nav-links">
@@ -680,10 +677,7 @@
 <footer>
   <div class="wrap">
     <div class="foot-brand">
-      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M4 30C10 30 10 18 16 18C22 18 22 30 28 30C34 30 34 18 40 18" stroke="#5ED1C4" stroke-width="4.5" stroke-linecap="round"/>
-        <path d="M8 36C14 36 14 24 20 24C26 24 26 36 32 36C38 36 38 24 44 24" stroke="#8FDB6E" stroke-width="4.5" stroke-linecap="round"/>
-      </svg>
+      <img src="images/logo-mark.png" alt="מסלול חדש">
       <div class="foot-brand-text">מסלול חדש<span>לבחור, להאמין, להצליח</span></div>
     </div>
     <div class="copy">© מסלול חדש — עמותה רשומה · כל הזכויות שמורות</div>
