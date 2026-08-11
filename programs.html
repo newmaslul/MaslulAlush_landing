@@ -76,7 +76,23 @@
   @media(min-width:861px){ .mobile-links{ display:none !important; } }
 
   /* ===== HERO ===== */
-  .hero{ background:linear-gradient(180deg, var(--navy) 0%, var(--navy-deep) 100%); color:#fff; text-align:center; padding:90px 0 70px; }
+  .hero{
+    position:relative; overflow:hidden;
+    min-height:100vh;
+    display:flex; align-items:center; justify-content:center;
+    background:var(--navy);
+    color:#fff; text-align:center; padding:130px 0 70px;
+  }
+  .hero-video{ position:absolute; inset:0; z-index:0; overflow:hidden; pointer-events:none; }
+  .hero-video iframe{
+    position:absolute; top:50%; left:50%;
+    width:177.78vh; height:100vh;
+    min-width:100vw; min-height:56.25vw;
+    transform:translate(-50%,-50%);
+    border:0;
+  }
+  .hero-overlay{ position:absolute; inset:0; z-index:1; background:linear-gradient(180deg, rgba(18,27,36,0.72) 0%, rgba(18,27,36,0.6) 45%, rgba(18,27,36,0.95) 100%); }
+  .hero > .wrap{ position:relative; z-index:2; }
   .eyebrow-pill{ display:inline-block; border:1px solid var(--green); color:var(--green); font-size:13px; font-weight:700; padding:8px 20px; border-radius:999px; margin-bottom:28px; }
   .hero h1{ font-size:clamp(32px, 6vw, 58px); margin-bottom:22px; }
   .hero h1 .teal{ color:var(--teal); }
@@ -236,6 +252,10 @@
 
 <!-- ===== HERO ===== -->
 <section class="hero">
+  <div class="hero-video" aria-hidden="true">
+    <iframe src="https://www.youtube.com/embed/8cDZ_1smX-w?autoplay=1&mute=1&loop=1&playlist=8cDZ_1smX-w&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&iv_load_policy=3&disablekb=1" title="" tabindex="-1" allow="autoplay; encrypted-media"></iframe>
+  </div>
+  <div class="hero-overlay" aria-hidden="true"></div>
   <div class="wrap">
     <span class="eyebrow-pill">חוברת תוכניות מלאה · תשפ״ז</span>
     <h1>תוכניות <span class="teal">חוסן</span> העצמה<br>ו<span class="green">מנהיגות</span> 2026</h1>
