@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>תוכניות חוסן, העצמה ומנהיגות 2026 — מסלול חדש</title>
+<meta name="description" content="חוברת תוכניות מלאה תשפ״ז: מסלול חדש בטוח, רצים בטוח וסדנאות חד־יומיות — עמותת מסלול חדש.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#1B2733;
+    --navy-deep:#121B24;
+    --cream:#F7F3E8;
+    --cream-deep:#EFE8D8;
+    --ink:#1B2733;
+    --ink-soft:#4B5661;
+    --teal:#2BAFA0;
+    --teal-deep:#1F8F83;
+    --green:#6FA83F;
+    --green-deep:#587F33;
+    --gold:#C9972E;
+    --line: rgba(27,39,51,0.12);
+    --line-light: rgba(247,243,232,0.16);
+    --max:1180px;
+    --radius:14px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Heebo', sans-serif;
+    line-height:1.65;
+    overflow-x:hidden;
+  }
+  img{display:block; max-width:100%; height:auto;}
+  h1,h2,h3{font-weight:800; line-height:1.25;}
+  .mono{font-family:'Space Mono', monospace;}
+  a{color:inherit; text-decoration:none;}
+  .wrap{max-width:var(--max); margin:0 auto; padding:0 28px;}
+  section{padding:88px 0;}
+  @media(max-width:720px){ section{padding:56px 0;} }
+
+  ::selection{ background:var(--teal); color:#fff; }
+
+  /* ===== UTILITY BAR ===== */
+  .utility-bar{ background:var(--navy-deep); color:rgba(247,243,232,0.75); font-size:13px; }
+  .utility-bar .wrap{ display:flex; align-items:center; justify-content:space-between; padding:9px 28px; gap:12px; flex-wrap:wrap; }
+  .utility-bar .tel a{ margin-inline-start:16px; color:rgba(247,243,232,0.9); font-weight:600; }
+  .utility-bar .tel a:hover{ color:var(--teal); }
+
+  /* ===== NAV ===== */
+  header.site{ background:var(--navy); position:sticky; top:0; z-index:50; box-shadow:0 2px 18px rgba(0,0,0,0.18); }
+  .navbar{ display:flex; align-items:center; justify-content:space-between; padding:16px 28px; max-width:var(--max); margin:0 auto; gap:20px; }
+  .brand{ display:flex; align-items:center; gap:10px; color:#fff; font-weight:800; font-size:18px; white-space:nowrap; }
+  .brand .mark{ width:34px; height:24px; }
+  nav.links{ display:flex; gap:26px; flex-wrap:wrap; }
+  nav.links a{ color:rgba(247,243,232,0.82); font-weight:600; font-size:14.5px; transition:color .2s; }
+  nav.links a:hover{ color:var(--teal); }
+  .nav-cta{ background:var(--teal); color:#0d1a1a; padding:10px 20px; border-radius:999px; font-weight:700; font-size:14px; white-space:nowrap; transition:transform .2s, background .2s; }
+  .nav-cta:hover{ background:var(--green); transform:translateY(-1px); }
+  @media(max-width:860px){ nav.links{ display:none; } }
+
+  /* ===== HERO ===== */
+  .hero{ background:linear-gradient(180deg, var(--navy) 0%, var(--navy-deep) 100%); color:#fff; text-align:center; padding:90px 0 70px; }
+  .eyebrow-pill{ display:inline-block; border:1px solid var(--green); color:var(--green); font-size:13px; font-weight:700; padding:8px 20px; border-radius:999px; margin-bottom:28px; }
+  .hero h1{ font-size:clamp(32px, 6vw, 58px); margin-bottom:22px; }
+  .hero h1 .teal{ color:var(--teal); }
+  .hero h1 .green{ color:var(--green); }
+  .hero .lede{ max-width:640px; margin:0 auto 36px; font-size:18px; color:rgba(247,243,232,0.82); }
+  .pill-row{ display:flex; gap:14px; justify-content:center; flex-wrap:wrap; margin-bottom:44px; }
+  .pill-link{ border:1px solid rgba(247,243,232,0.45); color:#fff; padding:13px 26px; border-radius:999px; font-weight:600; font-size:15px; transition:all .2s; }
+  .pill-link:hover{ background:rgba(247,243,232,0.1); border-color:#fff; }
+  .pill-link.primary{ background:var(--teal); border-color:var(--teal); color:#0d1a1a; }
+  .pill-link.primary:hover{ background:var(--green); border-color:var(--green); }
+  .hero-tagline{ font-size:20px; font-weight:800; margin-bottom:24px; }
+  .hero-tagline .accent{ color:var(--green); }
+  .hero-signoff{ display:flex; gap:22px; justify-content:center; flex-wrap:wrap; font-size:14px; color:rgba(247,243,232,0.72); }
+  .hero-signoff strong{ color:#fff; }
+
+  /* ===== STATS ===== */
+  .stats{ background:var(--cream-deep); }
+  .stats .wrap{ display:grid; grid-template-columns:repeat(3,1fr); gap:20px; padding:40px 28px; }
+  .stat{ text-align:center; }
+  .stat .num{ font-family:'Space Mono',monospace; font-size:clamp(28px,4vw,42px); font-weight:700; color:var(--green-deep); }
+  .stat .label{ font-size:13.5px; color:var(--ink-soft); margin-top:6px; }
+  @media(max-width:640px){ .stats .wrap{ grid-template-columns:1fr; gap:28px; } }
+
+  /* ===== SECTION HEADERS ===== */
+  .section-tag{ display:inline-flex; align-items:center; gap:8px; font-size:12.5px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:var(--teal-deep); background:rgba(43,175,160,0.1); padding:7px 16px; border-radius:999px; margin-bottom:18px; }
+  .section-tag.green{ color:var(--green-deep); background:rgba(111,168,63,0.12); }
+  .section-tag.gold{ color:#8a6a1f; background:rgba(201,151,46,0.14); }
+  .section-head{ max-width:760px; margin-bottom:44px; }
+  .section-head h2{ font-size:clamp(26px,4vw,38px); margin-bottom:16px; }
+  .section-head p{ color:var(--ink-soft); font-size:16.5px; }
+  .section-sub{ font-size:20px; font-weight:800; margin:48px 0 22px; }
+
+  /* ===== TABLE (overview) ===== */
+  .overview-table{ width:100%; border-collapse:collapse; border-radius:var(--radius); overflow:hidden; box-shadow:0 6px 24px rgba(27,39,51,0.08); }
+  .overview-table thead th{ background:var(--navy); color:#fff; text-align:right; padding:16px 20px; font-size:14.5px; }
+  .overview-table tbody td{ padding:16px 20px; background:#fff; border-bottom:1px solid var(--line); font-size:15px; }
+  .overview-table tbody tr:nth-child(even) td{ background:var(--cream-deep); }
+  .overview-table tbody tr:last-child td{ border-bottom:none; }
+  .overview-table .badge{ display:inline-block; background:var(--teal); color:#fff; font-size:11px; font-weight:700; padding:3px 9px; border-radius:6px; margin-inline-end:8px; }
+  .table-scroll{ overflow-x:auto; }
+  .table-scroll table{ min-width:560px; }
+
+  /* ===== CARDS ===== */
+  .card-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+  @media(max-width:900px){ .card-grid{ grid-template-columns:1fr; } }
+  .card{ background:#fff; border:1px solid var(--line); border-radius:var(--radius); padding:26px; }
+  .card .num-badge{ width:34px; height:34px; border-radius:999px; background:var(--teal); color:#fff; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:15px; margin-bottom:16px; }
+  .card.green .num-badge{ background:var(--green); }
+  .card.gold .num-badge{ background:var(--gold); }
+  .card h4{ font-size:17px; margin-bottom:10px; }
+  .card p{ font-size:14.5px; color:var(--ink-soft); }
+
+  /* ===== TRACK CARDS ===== */
+  .track-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:20px; align-items:stretch; }
+  @media(max-width:960px){ .track-grid{ grid-template-columns:1fr; } }
+  .track-card{ background:#fff; border:1px solid var(--line); border-radius:var(--radius); padding:26px; display:flex; flex-direction:column; }
+  .track-card.featured{ border:2px solid var(--teal); box-shadow:0 10px 30px rgba(43,175,160,0.16); position:relative; }
+  .track-card .kicker{ font-size:12.5px; font-weight:700; color:var(--teal-deep); text-transform:uppercase; letter-spacing:1px; margin-bottom:10px; }
+  .track-card h4{ font-size:19px; margin-bottom:6px; }
+  .track-card .scope{ font-size:14px; color:var(--ink-soft); margin-bottom:16px; }
+  .track-card ul{ list-style:none; display:flex; flex-direction:column; gap:10px; font-size:14.5px; }
+  .track-card ul li{ display:flex; gap:8px; align-items:flex-start; }
+  .track-card ul li::before{ content:"✓"; color:var(--teal); font-weight:700; flex-shrink:0; }
+
+  /* ===== VIDEO LINK ===== */
+  .video-link{ display:inline-flex; align-items:center; gap:8px; color:var(--teal-deep); font-weight:700; font-size:15px; border-bottom:2px solid var(--teal); padding-bottom:2px; }
+  .video-link .ico{ width:22px; height:22px; border-radius:50%; background:var(--teal); color:#fff; display:flex; align-items:center; justify-content:center; font-size:10px; }
+
+  /* ===== PRICING ===== */
+  .pricing-wrap{ display:grid; grid-template-columns:1.4fr 1fr; gap:24px; margin-top:36px; align-items:start; }
+  @media(max-width:860px){ .pricing-wrap{ grid-template-columns:1fr; } }
+  .price-table{ width:100%; border-collapse:collapse; background:#fff; border-radius:var(--radius); overflow:hidden; box-shadow:0 6px 24px rgba(27,39,51,0.08); }
+  .price-table thead th{ background:var(--navy); color:#fff; padding:14px 18px; text-align:right; font-size:14px; }
+  .price-table tbody td{ padding:14px 18px; border-bottom:1px solid var(--line); font-size:15px; }
+  .price-table tbody tr:last-child td{ border-bottom:none; }
+  .price-table .price{ font-family:'Space Mono',monospace; font-weight:700; color:var(--green-deep); white-space:nowrap; }
+  .discount-strip{ background:var(--green); color:#fff; border-radius:10px; padding:14px 18px; margin-top:14px; font-weight:700; font-size:14.5px; text-align:center; }
+  .discount-strip small{ display:block; font-weight:400; opacity:.85; font-size:12.5px; margin-top:4px; }
+  .notes-box{ background:var(--cream-deep); border-radius:var(--radius); padding:24px; }
+  .notes-box h5{ font-size:14px; font-weight:700; margin-bottom:14px; color:var(--ink); }
+  .notes-box ul{ list-style:none; display:flex; flex-direction:column; gap:12px; font-size:14px; color:var(--ink-soft); }
+  .notes-box ul li{ display:flex; gap:8px; }
+  .notes-box ul li::before{ content:"●"; color:var(--teal); font-size:8px; margin-top:6px; flex-shrink:0; }
+
+  /* ===== PROGRAM SECTION BACKGROUNDS ===== */
+  .prog-section{ border-top:1px solid var(--line); }
+  .prog-section.alt{ background:#fff; }
+
+  /* ===== AUDIENCE NOTE ===== */
+  .audience-note{ background:var(--cream-deep); border-radius:var(--radius); padding:24px 28px; font-size:15.5px; margin-top:8px; }
+  .audience-note strong{ color:var(--green-deep); }
+
+  /* ===== CONTACT / CTA FOOTER ===== */
+  .contact-cta{ background:var(--navy); color:#fff; text-align:center; }
+  .contact-cta h2{ font-size:clamp(26px,4vw,38px); margin-bottom:16px; }
+  .contact-cta h2 .green{ color:var(--green); }
+  .contact-cta p{ max-width:600px; margin:0 auto 40px; color:rgba(247,243,232,0.78); font-size:16px; }
+  .contact-cards{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-bottom:40px; }
+  @media(max-width:860px){ .contact-cards{ grid-template-columns:1fr; } }
+  .contact-card{ background:rgba(247,243,232,0.06); border:1px solid var(--line-light); border-radius:var(--radius); padding:22px; display:flex; align-items:center; justify-content:space-between; gap:12px; text-align:right; }
+  .contact-card .dot{ width:12px; height:12px; border-radius:50%; background:var(--teal); flex-shrink:0; }
+  .contact-card .label{ font-size:12.5px; color:rgba(247,243,232,0.6); margin-bottom:6px; }
+  .contact-card .value{ font-weight:700; font-size:15px; }
+  .contact-card .value a{ display:block; }
+  .cta-buttons{ display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
+  .cta-buttons .pill-link{ border-color:var(--teal); color:var(--teal); }
+  .cta-buttons .pill-link:hover{ background:var(--teal); color:#0d1a1a; }
+
+  footer.site-footer{ background:var(--navy-deep); color:rgba(247,243,232,0.55); text-align:center; padding:22px; font-size:13px; }
+</style>
+</head>
+<body>
+
+<div class="utility-bar">
+  <div class="wrap">
+    <span>גדרה · פנינה 8</span>
+    <span class="tel"><a href="tel:0544225112">רונן 054-4225112</a><a href="tel:0544221337">רולי 054-4221337</a></span>
+  </div>
+</div>
+
+<header class="site">
+  <div class="navbar">
+    <a class="brand" href="programs.html">
+      <svg class="mark" viewBox="0 0 60 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="markGrad" x1="0" y1="0" x2="60" y2="0" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#2BAFA0"/>
+            <stop offset="1" stop-color="#6FA83F"/>
+          </linearGradient>
+        </defs>
+        <path d="M2 32 C12 18, 18 12, 24 20 C30 28, 36 8, 46 4 C52 2, 56 4, 58 6" stroke="url(#markGrad)" stroke-width="5" stroke-linecap="round" fill="none"/>
+      </svg>
+      מסלול חדש
+    </a>
+    <nav class="links">
+      <a href="#maslul-chadash">מסלול חדש בטוח</a>
+      <a href="#ratzim-batuach">רצים בטוח</a>
+      <a href="#sadnaot">סדנאות חד־יומיות</a>
+      <a href="#contact">יצירת קשר</a>
+    </nav>
+    <a class="nav-cta" href="#contact">בואו נתחיל</a>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow-pill">חוברת תוכניות מלאה · תשפ״ז</span>
+    <h1>תוכניות <span class="teal">חוסן</span> העצמה<br>ו<span class="green">מנהיגות</span> 2026</h1>
+    <p class="lede">שילוב ייחודי של ספורט אתגרי, פעילות חוץ בית־ספרית וכלים רגשיים מעשיים — לחיזוק החוסן, האקלים החברתי והמנהיגות.</p>
+    <div class="pill-row">
+      <a class="pill-link primary" href="#maslul-chadash">מסלול חדש בטוח</a>
+      <a class="pill-link" href="#ratzim-batuach">רצים בטוח</a>
+      <a class="pill-link" href="#sadnaot">סדנאות חד־יומיות</a>
+    </div>
+    <div class="hero-tagline">לבחור, <span class="accent">להאמין</span>, להצליח</div>
+    <div class="hero-signoff">
+      <span><strong>רונן</strong> · 054-4225112</span>
+      <span><strong>רולי</strong> · 054-4221337</span>
+      <span><strong>newmaslul@gmail.com</strong></span>
+      <span>newmaslul.co.il</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STATS ===== -->
+<div class="stats">
+  <div class="wrap">
+    <div class="stat"><div class="num mono">15–18</div><div class="label">משתתפים מרבי בקבוצה</div></div>
+    <div class="stat"><div class="num mono">10%</div><div class="label">הנחה מ־4 קבוצות ומעלה</div></div>
+    <div class="stat"><div class="num mono">0%</div><div class="label">מע״מ — עמותה</div></div>
+  </div>
+</div>
+
+<!-- ===== OVERVIEW TABLE ===== -->
+<section id="overview">
+  <div class="wrap">
+    <span class="section-tag">תוכניות</span>
+    <div class="section-head">
+      <h2>טבלה מרכזת — תוכניות ומסלולים</h2>
+      <p>עמותת "מסלול חדש" מפעילה מגוון תוכניות חוסן והעצמה המשלבות ספורט, פעילות אתגרית וכלים רגשיים ומעשיים, ומותאמות אישית לצרכי כל בית ספר.</p>
+    </div>
+    <div class="table-scroll">
+      <table class="overview-table">
+        <thead>
+          <tr><th>שם התוכנית</th><th>משך הסדנה</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><span class="badge">סרטון</span><a href="#maslul-chadash">מסלול חדש — תוכנית מלאה בשילוב יום פעילות ימית (26 ש״א)</a></td><td>11 מפגשים + יום פעילות ימית בשטח</td></tr>
+          <tr><td><a href="#maslul-chadash">מסלול חדש — תוכנית ממוקדת בשילוב יום פעילות ימית (20 ש״א)</a></td><td>8 מפגשים + יום פעילות ימית בשטח</td></tr>
+          <tr><td><a href="#maslul-chadash">מסלול חדש — סדנה ממוקדת ללא פעילות ימית (10 ש״א)</a></td><td>9 מפגשים</td></tr>
+          <tr><td><span class="badge">סרטון</span><a href="#ratzim-batuach">מסלול חדש "רצים בטוח" — כולל השתתפות במירוץ (64 ש״א)</a></td><td>15 מפגשים + יום מירוץ</td></tr>
+          <tr><td><a href="#sadnaot">סדנה חד־יומית (2 ש״א)</a></td><td>מפגש 1</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROGRAM 1: מסלול חדש בטוח ===== -->
+<section id="maslul-chadash" class="prog-section alt">
+  <div class="wrap">
+    <span class="section-tag">מסלול חדש · תוכנית 1</span>
+    <div class="section-head">
+      <h2>מעטפת חדשנית להעצמה אישית ואקלים כיתתי</h2>
+      <p>תוכנית "מסלול חדש בטוח" מטמיעה בבתי הספר שילוב ייחודי של ספורט אתגרי, פעילויות חוץ בית־ספריות (T.D.O) ורכישת כלים קוגניטיביים והתנהגותיים — במטרה לשפר את האקלים הכיתתי ולהעצים כל תלמיד ותלמידה.</p>
+    </div>
+
+    <div class="card-grid">
+      <div class="card"><div class="num-badge">1</div><h4>מעטפת להעצמה אישית</h4><p>שילוב של ספורט אתגרי, פעילויות חוץ בית־ספריות ורכישת כלים קוגניטיביים והתנהגותיים.</p></div>
+      <div class="card"><div class="num-badge">2</div><h4>שיפור אקלים כיתתי</h4><p>בניית שיתוף פעולה, גיבוש חברתי, הפחתת אלימות וטיפוח תקשורת בין־אישית מכבדת ומעצימה.</p></div>
+      <div class="card"><div class="num-badge">3</div><h4>התאמה מלאה למסגרת</h4><p>התוכנית מוטמעת במערכת השעות הרשמית ומתאימה עצמה לצרכים הספציפיים של התלמידים.</p></div>
+    </div>
+
+    <div class="section-sub">ייחודיות ומתודולוגיית העבודה</div>
+    <div class="card-grid">
+      <div class="card"><h4>למידה חווייתית</h4><p>שילוב מדויק בין אתגרים פיזיים משמעותיים בשטח לבין כלים רגשיים ורפלקציה קבוצתית מעמיקה לעיבוד החוויות.</p></div>
+      <div class="card"><h4>שיפור התקשורת</h4><p>טיפוח שיח פתוח ומכבד, הבנת האחר, פתרון קונפליקטים בדרכים לא אלימות וחיזוק העבודה בצוות.</p></div>
+      <div class="card"><h4>מקצועיות מגובה</h4><p>הנחיה על ידי מאמנים מקצועיים המומחים בחינוך וטיפול, תוך שימוש בכלים פסיכו־חינוכיים מבוססי מחקר בשטח.</p></div>
+    </div>
+
+    <div class="section-sub" style="display:flex; align-items:center; gap:14px; flex-wrap:wrap;">
+      מסלולי "מסלול חדש" לבחירה
+      <a class="video-link" href="#" onclick="return false;"><span class="ico">▶</span>סרטון</a>
+    </div>
+
+    <div class="track-grid">
+      <div class="track-card">
+        <div class="kicker">מסלול ממוקד</div>
+        <h4>סדנה ללא אירוע שיא</h4>
+        <div class="scope">היקף: 10 שעות אקדמיות</div>
+        <ul>
+          <li>9 מפגשים פרונטליים חוויתיים (1 ש״א) בביה״ס</li>
+          <li>מפגש סיכום והערכת התהליך (2 ש״א)</li>
+          <li>מתאים במיוחד לחיזוק מהיר של קבוצות ממוקדות</li>
+        </ul>
+      </div>
+      <div class="track-card">
+        <div class="kicker">המסלול ממוקד כולל פעילות ימית</div>
+        <h4>סדנה ממוקדת ובסיום פעילות ימית</h4>
+        <div class="scope">היקף: 20 שעות אקדמיות</div>
+        <ul>
+          <li>7 מפגשים פרונטליים חוויתיים (1 ש״א), בביה״ס</li>
+          <li>יום שיא מסכם מחוץ לביה״ס: יום חוויתי ומעצים (12 ש״א)</li>
+          <li>מפגש סיכום והערכה לתוכנית (1 ש״א)</li>
+        </ul>
+      </div>
+      <div class="track-card featured">
+        <div class="kicker">המסלול המלא כולל פעילות ימית</div>
+        <h4>סדנה מלאה ובסיום פעילות ימית</h4>
+        <div class="scope">היקף: 26 שעות אקדמיות</div>
+        <ul>
+          <li>12 מפגשים פרונטליים (1 ש״א) בביה״ס</li>
+          <li>יום שיא מסכם מחוץ לביה״ס: חצי יום מרגש ומאתגר (12 ש״א)</li>
+          <li>מפגש סיכום, רפלקציה ועיבוד (2 ש״א)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section-sub">עלויות והבהרות</div>
+    <div class="pricing-wrap">
+      <div>
+        <table class="price-table">
+          <thead><tr><th>מסלול הפרויקט</th><th>מחיר לקבוצה בודדת</th></tr></thead>
+          <tbody>
+            <tr><td>סדנה מלאה + פעילות ימית (26 ש״א)</td><td class="price">₪9,000</td></tr>
+            <tr><td>סדנה ממוקדת + פעילות ימית (20 ש״א)</td><td class="price">₪7,000</td></tr>
+            <tr><td>סדנה ללא אירוע שיא (10 ש״א)</td><td class="price">₪5,000</td></tr>
+          </tbody>
+        </table>
+        <div class="discount-strip">10% הנחה על המחיר הכולל מ־4 קבוצות ומעלה<small>המחירים פטורים ממע״מ</small></div>
+      </div>
+      <div class="notes-box">
+        <h5>דגשים חשובים</h5>
+        <ul>
+          <li>מספר משתתפים מרבי בקבוצה אחת: 15 תלמידים</li>
+          <li>קיום התוכנית מותנה בהזמנת לפחות 2 סדנאות עוקבות באותו יום פעילות</li>
+          <li>המחיר אינו כולל את עלות ההסעה של התלמידים אל אירוע השיא החיצוני</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROGRAM 2: רצים בטוח ===== -->
+<section id="ratzim-batuach" class="prog-section">
+  <div class="wrap">
+    <span class="section-tag green">רצים בטוח · תוכנית 2</span>
+    <div class="section-head">
+      <h2 style="display:flex; align-items:center; gap:14px; flex-wrap:wrap;">
+        ספורט, ריצה וכלים לאורח חיים בריא
+        <a class="video-link" href="#" onclick="return false;" style="color:var(--green-deep); border-color:var(--green);"><span class="ico" style="background:var(--green);">▶</span>סרטון</a>
+      </h2>
+      <p>תוכנית "רצים בטוח" בונה נבחרת ריצה מנצחת בבית הספר, ומקנה כלים פרקטיים לקידום אורח חיים בריא, פיתוח חוסן פנימי ומנהיגות מעצימה בקרב בני הנוער.</p>
+    </div>
+
+    <div class="section-sub">שלושה מוקדי התערבות</div>
+    <div class="card-grid">
+      <div class="card green"><div class="num-badge">1</div><h4>העצמה ומנהיגות</h4><p>פיתוח תחושת מסוגלות אישית, חיזוק ביטחון עצמי, מיומנויות התמדה והכשרת מובילי שינוי בתוך הקבוצה.</p></div>
+      <div class="card green"><div class="num-badge">2</div><h4>אורח חיים בריא</h4><p>עידוד פעילות גופנית קבועה דרך ריצה, ופיתוח תפיסה הוליסטית המשלבת בריאות גופנית לצד בריאות נפשית מאוזנת.</p></div>
+      <div class="card green"><div class="num-badge">3</div><h4>שיפור האקלים</h4><p>פיתוח סביבה כיתתית תומכת, טיפוח שיח מכבד ותקשורת בין־אישית פתוחה, ומניעת התנהגויות סיכון בשטח בית הספר.</p></div>
+    </div>
+
+    <div class="audience-note"><strong>למי מיועדת התוכנית?</strong> מותאמת בדיוק לחטיבות ביניים (ז'–ט'), תיכונים (י'–י"ב) וקבוצות של בני נוער הזקוקים לחוויית הצלחה מחוללת שינוי.</div>
+
+    <div class="section-sub">מתודולוגיה, מבנה והרכב קבוצות</div>
+    <div class="card-grid">
+      <div class="card green"><h4>מתודולוגיה מנצחת</h4><p>שילוב אתגרים פיזיים מדורגים עם שיחות עיבוד רגשיות, בליווי צמוד של מנחים ומאמני כושר וריצה מקצועיים.</p></div>
+      <div class="card green"><h4>הרכב קבוצה</h4><p>עד 15 משתתפים בקבוצה הטרוגנית, או עד 18 משתתפים כאשר מדובר בכיתה אורגנית בליווי מחנך/ת כיתה.</p></div>
+      <div class="card green"><h4>גמישות באירוע השיא</h4><p>ניתן לקיים כל אירוע שיא אחר בתיאום עם צוות בית הספר: מירוץ מקומי, יום ניווט מאתגר, יום שדה או פעילות ימית.</p></div>
+    </div>
+
+    <div class="section-sub">עלויות והבהרות</div>
+    <div class="pricing-wrap">
+      <div>
+        <table class="price-table">
+          <thead><tr><th>מסלול הפרויקט</th><th>מחיר לקבוצה בודדת</th></tr></thead>
+          <tbody>
+            <tr><td>תוכנית רצים בטוח (64 ש״א)</td><td class="price">₪15,900</td></tr>
+            <tr><td>עלות רישום משתתף למירוץ</td><td class="price">₪90</td></tr>
+          </tbody>
+        </table>
+        <div class="discount-strip" style="background:var(--green);">10% הנחה על המחיר הכולל מ־2 קבוצות ומעלה<small>מחיר פטור ממע״מ · לא כולל הסעה למירוץ</small></div>
+      </div>
+      <div class="notes-box">
+        <h5>דגשים חשובים</h5>
+        <ul>
+          <li>אירוע שיא מירוץ: ריצה משותפת במירוץ רשמי (לא כוללת הסעה)</li>
+          <li>ניתן להתאים אירוע שיא חלופי בתיאום מלא עם צוות בית הספר</li>
+          <li>מומלץ לתאם מראש את מועד המירוץ הרשמי הקרוב לבית הספר</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROGRAM 3: סדנאות חד־יומיות ===== -->
+<section id="sadnaot" class="prog-section alt">
+  <div class="wrap">
+    <span class="section-tag gold">סדנאות חד־יומיות · תוכנית 3</span>
+    <div class="section-head">
+      <h2>סדנת גיבוש מעצימה ליום אחד</h2>
+      <p>סדנת גיבוש שבונה קשרים חברתיים חזקים, ומעניקה לצוות החינוכי כלי מקצועי לאבחון התלמידים והקבוצה. מתאימה לפעילות גיבוש והפגה בתחילת או בסוף שנת הלימודים.</p>
+    </div>
+
+    <div class="section-sub">יעדים פדגוגיים־חברתיים</div>
+    <div class="card-grid">
+      <div class="card gold"><div class="num-badge">1</div><h4>העצמה ומנהיגות</h4><p>פיתוח תחושת מסוגלות אישית יוצאת דופן, וחיזוק מיומנויות התמדה והובלת שינוי בקבוצה.</p></div>
+      <div class="card gold"><div class="num-badge">2</div><h4>עבודת צוות ותקשורת בין־אישית</h4><p>חיזוק הביטחון העצמי וגילוי חוזקות אישיות וקבוצתיות דרך פעילות משותפת.</p></div>
+      <div class="card gold"><div class="num-badge">3</div><h4>שיפור האקלים וגיבוש צוות</h4><p>שיפור הדינמיקה הקבוצתית, עבודה לקראת מטרה משותפת והגברת תחושת השייכות וההפגה.</p></div>
+    </div>
+
+    <div class="section-sub">עלויות והבהרות</div>
+    <div class="pricing-wrap">
+      <div>
+        <table class="price-table">
+          <thead><tr><th>מסלול הפרויקט</th><th>מחיר לכיתה</th></tr></thead>
+          <tbody>
+            <tr><td>סדנה חד־יומית (2 ש״א)</td><td class="price">₪1,750</td></tr>
+          </tbody>
+        </table>
+        <div class="discount-strip" style="background:var(--gold); color:#2b2107;">10% הנחה על המחיר הכולל מ־4 קבוצות ומעלה<small style="color:#4a3a12;">מחיר פטור ממע״מ</small></div>
+      </div>
+      <div class="notes-box">
+        <h5>דגשים חשובים</h5>
+        <ul>
+          <li>עד 15 בקבוצה הטרוגנית, או עד 20 בכיתה אורגנית בליווי מחנך/ת</li>
+          <li>ניתן לקיים בכל מקום, בתוך או מחוץ לבית הספר</li>
+          <li>אורך הסדנה: 2 שעות אקדמיות</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT / CTA ===== -->
+<section id="contact" class="contact-cta">
+  <div class="wrap">
+    <h2>בואו נבנה <span class="green">יחד</span><br>חוויה מעצימה</h2>
+    <p>צוות עמותת "מסלול חדש" מזמין אתכם לעשות את הצעד הראשון לשיפור משמעותי באקלים החינוכי ובחיזוק המוטיבציה של התלמידים.</p>
+    <div class="contact-cards">
+      <div class="contact-card"><div><div class="label">טלפונים לתיאום ומידע</div><div class="value">רונן: <a href="tel:0544225112">054-4225112</a> · רולי: <a href="tel:0544221337">054-4221337</a></div></div><span class="dot"></span></div>
+      <div class="contact-card"><div><div class="label">כתובת דואר אלקטרוני</div><div class="value"><a href="mailto:newmaslul@gmail.com">newmaslul@gmail.com</a></div></div><span class="dot"></span></div>
+      <div class="contact-card"><div><div class="label">אתר האינטרנט וכתובת העמותה</div><div class="value">newmaslul.co.il · גדרה, פנינה 8</div></div><span class="dot"></span></div>
+    </div>
+    <div class="cta-buttons">
+      <a class="pill-link" href="#maslul-chadash">לבחור</a>
+      <a class="pill-link" href="#ratzim-batuach">להאמין</a>
+      <a class="pill-link" href="#sadnaot">להצליח</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">מסלול חדש — עמותה לחוסן והעצמה ומנהיגות · newmaslul.co.il</footer>
+
+</body>
+</html>
