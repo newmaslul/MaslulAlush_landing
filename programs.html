@@ -128,7 +128,9 @@
   /* ===== TABLE (overview) ===== */
   .overview-table{ width:100%; border-collapse:collapse; border-radius:var(--radius); overflow:hidden; box-shadow:0 6px 24px rgba(27,39,51,0.08); }
   .overview-table thead th{ background:var(--navy); color:#fff; text-align:right; padding:16px 20px; font-size:14.5px; }
-  .overview-table tbody td{ padding:16px 20px; background:#fff; border-bottom:1px solid var(--line); font-size:15px; }
+  .overview-table tbody td{ padding:17px 20px; background:#fff; border-bottom:1px solid var(--line); font-size:16.5px; }
+  .overview-table tbody td:first-child{ font-weight:700; color:var(--ink); }
+  .overview-table tbody td:last-child{ font-weight:600; color:var(--teal-deep); }
   .overview-table tbody tr:nth-child(even) td{ background:var(--cream-deep); }
   .overview-table tbody tr:last-child td{ border-bottom:none; }
   .overview-table .badge{ display:inline-block; background:var(--teal); color:#fff; font-size:11px; font-weight:700; padding:3px 9px; border-radius:6px; margin-inline-end:8px; }
@@ -310,10 +312,10 @@
           <tr><th>שם התוכנית</th><th>משך הסדנה</th></tr>
         </thead>
         <tbody>
-          <tr><td><span class="badge">סרטון</span><a href="#maslul-chadash">מסלול חדש — תוכנית מלאה בשילוב יום פעילות ימית (26 ש״א)</a></td><td>11 מפגשים + יום פעילות ימית בשטח</td></tr>
+          <tr><td><a href="#maslul-chadash">מסלול חדש — תוכנית מלאה בשילוב יום פעילות ימית (26 ש״א)</a></td><td>11 מפגשים + יום פעילות ימית בשטח</td></tr>
           <tr><td><a href="#maslul-chadash">מסלול חדש — תוכנית ממוקדת בשילוב יום פעילות ימית (20 ש״א)</a></td><td>8 מפגשים + יום פעילות ימית בשטח</td></tr>
           <tr><td><a href="#maslul-chadash">מסלול חדש — סדנה ממוקדת ללא פעילות ימית (10 ש״א)</a></td><td>9 מפגשים</td></tr>
-          <tr><td><span class="badge">סרטון</span><a href="#ratzim-batuach">מסלול חדש "רצים בטוח" — כולל השתתפות במירוץ (64 ש״א)</a></td><td>15 מפגשים + יום מירוץ</td></tr>
+          <tr><td><a href="#ratzim-batuach">מסלול חדש "רצים בטוח" — כולל השתתפות במירוץ (64 ש״א)</a></td><td>15 מפגשים + יום מירוץ</td></tr>
           <tr><td><a href="#sadnaot">סדנה חד־יומית (2 ש״א)</a></td><td>מפגש 1</td></tr>
         </tbody>
       </table>
@@ -324,7 +326,10 @@
 <!-- ===== PROGRAM 1: מסלול חדש בטוח ===== -->
 <section id="maslul-chadash" class="prog-section alt">
   <div class="wrap">
-    <span class="section-tag">מסלול חדש · תוכנית 1</span>
+    <div style="display:flex; align-items:center; gap:14px; flex-wrap:wrap; margin-bottom:18px;">
+      <span class="section-tag" style="margin-bottom:0;">מסלול חדש · תוכנית 1</span>
+      <a class="video-link" href="https://www.youtube.com/watch?v=gvFIqzuT0s4" target="_blank" rel="noopener"><span class="ico">▶</span>סרטון התוכנית</a>
+    </div>
     <div class="section-head">
       <h2>מעטפת חדשנית להעצמה אישית ואקלים כיתתי</h2>
       <p>תוכנית "מסלול חדש בטוח" מטמיעה בבתי הספר שילוב ייחודי של ספורט אתגרי, פעילויות חוץ בית־ספריות (T.D.O) ורכישת כלים קוגניטיביים והתנהגותיים — במטרה לשפר את האקלים הכיתתי ולהעצים כל תלמיד ותלמידה.</p>
@@ -345,7 +350,7 @@
 
     <div class="section-sub" style="display:flex; align-items:center; gap:14px; flex-wrap:wrap;">
       מסלולי "מסלול חדש" לבחירה
-      <a class="video-link" href="#" onclick="return false;"><span class="ico">▶</span>סרטון</a>
+      <a class="video-link" href="https://www.youtube.com/watch?v=gvFIqzuT0s4" target="_blank" rel="noopener"><span class="ico">▶</span>סרטון</a>
     </div>
 
     <div class="track-grid">
@@ -387,9 +392,9 @@
         <table class="price-table">
           <thead><tr><th>מסלול הפרויקט</th><th>מחיר לקבוצה בודדת</th></tr></thead>
           <tbody>
-            <tr><td>סדנה מלאה + פעילות ימית (26 ש״א)</td><td class="price">₪9,000</td></tr>
-            <tr><td>סדנה ממוקדת + פעילות ימית (20 ש״א)</td><td class="price">₪7,000</td></tr>
-            <tr><td>סדנה ללא אירוע שיא (10 ש״א)</td><td class="price">₪5,000</td></tr>
+            <tr><td>סדנה מלאה + פעילות ימית (26 ש״א)</td><td class="price">₪8,900</td></tr>
+            <tr><td>סדנה ממוקדת + פעילות ימית (20 ש״א)</td><td class="price">₪6,900</td></tr>
+            <tr><td>סדנה ללא אירוע שיא (10 ש״א)</td><td class="price">₪4,900</td></tr>
           </tbody>
         </table>
         <div class="discount-strip">10% הנחה על המחיר הכולל מ־4 קבוצות ומעלה<small>המחירים פטורים ממע״מ</small></div>
@@ -413,7 +418,7 @@
     <div class="section-head">
       <h2 style="display:flex; align-items:center; gap:14px; flex-wrap:wrap;">
         ספורט, ריצה וכלים לאורח חיים בריא
-        <a class="video-link" href="#" onclick="return false;" style="color:var(--green-deep); border-color:var(--green);"><span class="ico" style="background:var(--green);">▶</span>סרטון</a>
+        <a class="video-link" href="https://www.youtube.com/watch?v=8cDZ_1smX-w" target="_blank" rel="noopener" style="color:var(--green-deep); border-color:var(--green);"><span class="ico" style="background:var(--green);">▶</span>סרטון</a>
       </h2>
       <p>תוכנית "רצים בטוח" בונה נבחרת ריצה מנצחת בבית הספר, ומקנה כלים פרקטיים לקידום אורח חיים בריא, פיתוח חוסן פנימי ומנהיגות מעצימה בקרב בני הנוער.</p>
     </div>
