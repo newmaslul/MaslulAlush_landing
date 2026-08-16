@@ -134,6 +134,19 @@
   .card h4{ font-size:17px; margin-bottom:10px; }
   .card p{ font-size:14.5px; color:var(--ink-soft); }
 
+  /* ===== PHOTO MOMENT ===== */
+  .photo-band{ background:var(--navy); color:#fff; }
+  .photo-grid{ display:grid; grid-template-columns:0.9fr 1.1fr; gap:44px; align-items:center; }
+  @media(max-width:860px){ .photo-grid{ grid-template-columns:1fr; gap:28px; } }
+  .photo-frame{ border-radius:var(--radius); overflow:hidden; aspect-ratio:4/5; box-shadow:0 20px 50px rgba(0,0,0,0.35); max-width:420px; margin:0 auto; }
+  .photo-frame img{ width:100%; height:100%; object-fit:cover; display:block; }
+  .photo-text .section-tag{ margin-bottom:18px; }
+  .photo-text h2{ color:#fff; font-size:clamp(24px,3.5vw,34px); margin-bottom:16px; }
+  .photo-text p{ color:rgba(247,243,232,0.8); font-size:16px; }
+  .photo-highlights{ list-style:none; display:flex; flex-direction:column; gap:14px; margin-top:24px; }
+  .photo-highlights li{ display:flex; gap:10px; align-items:flex-start; font-size:15px; color:rgba(247,243,232,0.85); }
+  .photo-highlights li::before{ content:"✓"; color:var(--teal); font-weight:700; flex-shrink:0; }
+
   /* ===== STAGE TIMELINE (שלבי התוכנית) ===== */
   .stage-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:20px; align-items:stretch; }
   @media(max-width:860px){ .stage-grid{ grid-template-columns:1fr; } }
@@ -312,6 +325,25 @@
       <div class="card green"><h4>התקדמות מדורגת ובטוחה</h4><p>בניית אתגרים באופן הדרגתי המותאם ליכולות המשתתפים.</p></div>
       <div class="card green"><h4>דגש על למידה חברתית־רגשית</h4><p>פיתוח כישורים רגשיים וחברתיים לצד הפעילות הגופנית.</p></div>
       <div class="card green"><h4>התאמה לגילאי בית ספר יסודי</h4><p>תכנים ואתגרים המותאמים לשלבי ההתפתחות של ילדי יסודי.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PHOTO MOMENT ===== -->
+<section id="moment" class="photo-band">
+  <div class="wrap photo-grid">
+    <div class="photo-frame">
+      <img src="images/elementary-moment.jpg" alt="מדריכה מחבקת קבוצת ילדים מבית ספר יסודי בפעילות מסלול חדש בשטח">
+    </div>
+    <div class="photo-text">
+      <span class="section-tag green">רגע מהשטח</span>
+      <h2>קשר אמיתי, לא רק פעילות</h2>
+      <p>מאחורי כל תרגיל ואתגר עומד הדבר שבאמת עושה את ההבדל — קשר אישי וחם בין המדריכים לילדים. זו הסיבה שהתוכנית מתחילה תמיד משלב א׳: בניית אמון וזיקה.</p>
+      <ul class="photo-highlights">
+        <li>מדריכים מקצועיים שמכירים כל ילד וילדה בשם</li>
+        <li>אווירה בטוחה, מזמינה ומכילה לאורך כל המפגשים</li>
+        <li>חוויות שמלוות את התלמידים הרבה אחרי הצלצול</li>
+      </ul>
     </div>
   </div>
 </section>
