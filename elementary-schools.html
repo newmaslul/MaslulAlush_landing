@@ -84,7 +84,7 @@
     color:#fff; text-align:center; padding:120px 0 64px;
   }
   .hero-video{ position:absolute; inset:0; z-index:0; overflow:hidden; }
-  .hero-video img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  .hero-video video{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
   .hero-overlay{ position:absolute; inset:0; z-index:1; background:linear-gradient(180deg, rgba(18,27,36,0.72) 0%, rgba(18,27,36,0.6) 45%, rgba(18,27,36,0.95) 100%); }
   .hero > .wrap{ position:relative; z-index:2; }
   .eyebrow-pill{ display:inline-block; border:1px solid var(--green); color:var(--green); font-size:13px; font-weight:700; padding:8px 20px; border-radius:999px; margin-bottom:28px; }
@@ -250,7 +250,9 @@
 <!-- ===== HERO ===== -->
 <section class="hero">
   <div class="hero-video" aria-hidden="true">
-    <img src="images/hero_014.jpg" alt="">
+    <video autoplay muted loop playsinline poster="images/elementary-hero-poster.jpg">
+      <source src="videos/elementary-hero.mp4" type="video/mp4">
+    </video>
   </div>
   <div class="hero-overlay" aria-hidden="true"></div>
   <div class="wrap">
@@ -488,6 +490,18 @@
       mobileLinks.classList.remove('open');
       menuToggle.classList.remove('open');
       menuToggle.setAttribute('aria-expanded','false');
+    });
+  });
+
+  // Force-start the hero background video — some browsers delay/pause
+  // autoplay until an explicit play() call.
+  document.querySelectorAll('video[autoplay]').forEach(function(v){
+    v.muted = true;
+    var tryPlay = function(){ v.play().catch(function(){}); };
+    if (v.readyState >= 2) tryPlay();
+    else v.addEventListener('loadeddata', tryPlay, { once: true });
+    ['click','touchstart','scroll'].forEach(function(evt){
+      document.addEventListener(evt, tryPlay, { once: true, passive: true });
     });
   });
 </script>
